@@ -1,0 +1,132 @@
+<!-- Modal -->
+<div >
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title pull-left">{{pokemon.name}}</h3>
+        <button type="button"
+                class="close"
+                aria-label="Close"
+                class="close pull-right"
+                (click)="onHideModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container col-md-12">
+          <div class="row">
+
+            <!-- Pokemon Image -->
+            <div class="col-md-2">
+              <img [src]="pokemon.image" class="rounded float-left img-thumbnail">
+            </div>
+
+            <!-- Pokemon Type -->
+            <div class="col-md-5">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <strong>Height</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2">&nbsp; {{pokemon.height}}</div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <strong>Weight</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2">&nbsp; {{pokemon.weight}}</div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <strong>Type</strong>
+                  <ul >
+                    <li *ngFor="let type of pokemon.type">
+                      <span class="align-self-end">{{type}}</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="list-group-item">
+                  <strong>Abilities</strong>
+                  <ul>
+                    <li *ngFor="let abilitiy of pokemon.abilities">
+                      <span class="align-self-end">{{abilitiy}}</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Pokemon Stats -->
+            <div class="col-md-5">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <strong>HP</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2 float-right">
+                          <span class="badge badge-default">{{pokemon.stats.hp}}
+                        </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <strong>Attack</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2">
+                          <span class="badge badge-danger">{{pokemon.stats.attack}}
+                        </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <strong>Defense</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2">
+                          <span class="badge badge-warning">{{pokemon.stats.deffense}}
+                        </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <strong>Special Attack</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2">
+                          <span class="badge badge-info">{{pokemon.stats['sp.atk']}}
+                        </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <strong>Special Defense</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2">
+                          <span class="badge badge-success">{{pokemon.stats['sp.def']}}
+                        </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <strong>Speed</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2">
+                          <span class="badge badge-primary">{{pokemon.stats.speed}}
+                        </span>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <strong>Total</strong>
+                  <div class="d-flex justify-content-end">
+                    <div class="mr-auto p-2">
+                          <span class="badge badge-default">{{pokemon.stats.total}}
+                        </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>  <!-- End Row -->
+        </div>   <!-- End col-md-12  -->
+      </div>    <!-- End modal body -->
+    </div>       <!-- End modal content -->
+  </div>
+</div>

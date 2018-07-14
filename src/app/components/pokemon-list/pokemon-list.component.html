@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="col-md-12">
+    <div class="row">
+
+      <!-- Error Message -->
+      <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+      <div class="col-md-4" *ngFor="let pokemon of pokemons">
+        <div class="card poke-row text-center" (click)="onShowDetail(pokemon)">
+          <div class="row text-center text-white">
+            <img [src]="pokemon.image" class="rounded mx-auto d-block poke-img poke-img-size">
+          </div>
+          <div class="card-block" >
+            <h3 class="card-title text-center">{{pokemon.name}}</h3>
+            <p class="card-text text-center"><b>Species:</b> {{pokemon.species}}</p>
+            <button type="button" class="btn btn-info" *ngIf="pokemon.type.indexOf('Flying') !== -1">Flying</button>
+            <button type="button" class="btn btn-info" *ngIf="pokemon.type.indexOf('Electric') !== -1">Electric</button>
+            <button type="button" class="btn btn-info" *ngIf="pokemon.type.indexOf('Ice') !== -1">Ice</button>
+            <button type="button" class="btn btn-success" *ngIf="pokemon.type.indexOf('Grass') !== -1">Grass</button>
+            <button type="button" class="btn btn-success" *ngIf="pokemon.type.indexOf('Bug') !== -1">Bug</button>
+            <button type="button" class="btn btn-warning" *ngIf="pokemon.type.indexOf('Poison') !== -1">Poison</button>
+            <button type="button" class="btn btn-danger" *ngIf="pokemon.type.indexOf('Fire') !== -1" >Fire</button>
+            <button type="button" class="btn btn-primary" *ngIf="pokemon.type.indexOf('Water') !== -1">Water</button>
+            <button type="button" class="btn btn-secondary" *ngIf="pokemon.type.indexOf('Normal') !== -1">Normal</button>
+            <button type="button" class="btn btn-secondary" *ngIf="pokemon.type.indexOf('Psychic') !== -1">Psychic</button>
+            <span class="card-link" hidden><i class="fa fa-pencil"></i></span>
+            <span class="card-link text-warning">
+                             <i class="fa fa-info-circle fa-2x"></i></span>
+            <span class="card-link text-danger"
+                  tooltip="Careful, this will delete Pokemon!"
+                  placement="right" (click)="onDeletePokemon(pokemon)">
+                                     <i class="fa fa-trash-o fa-2x"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+<app-pokemon-detail
+  [selectedPokemon]="selectedPokemon"
+  [modal]="pokemonDetailModal"
+  bsModal #pokemonDetailModal="bs-modal"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="mySmallModalLabel"
+  aria-hidden="true"
+></app-pokemon-detail>

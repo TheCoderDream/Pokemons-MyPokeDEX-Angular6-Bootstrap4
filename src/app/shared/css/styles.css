@@ -1,0 +1,21 @@
+.poke-row {
+  margin-bottom: 10px;
+}
+.poke-img {
+  max-width: 210px;
+  max-height: 210px;
+}
+.add-poke {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card-link:hover .fa-trash-o {
+  color: red;
+}
+.card-link:hover .fa-info-circle {
+  color: #F97C00;
+}
+em {
+  float: right;
+  color: #E05C65;
+}
