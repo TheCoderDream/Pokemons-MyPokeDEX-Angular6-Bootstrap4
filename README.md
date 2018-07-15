@@ -1,3 +1,7 @@
+![alt-text](https://github.com/TheCodersDream/Pokemons-MyPokeDEX-Angular6-Bootstrap4/blob/master/Screenshot_17.png)
+![alt-text](https://github.com/TheCodersDream/Pokemons-MyPokeDEX-Angular6-Bootstrap4/blob/master/Screenshot_18.png)
+![alt-text](https://github.com/TheCodersDream/Pokemons-MyPokeDEX-Angular6-Bootstrap4/blob/master/Screenshot_19.png)
+
 # Pokedex
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
